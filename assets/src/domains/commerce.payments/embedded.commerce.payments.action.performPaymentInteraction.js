@@ -38,6 +38,7 @@ var AmazonCheckout = require("../../amazon/checkout");
 
 module.exports = function(context, callback) {
   try {
+    console.log("performPaymentInteraction");
     var amazonCheckout = new AmazonCheckout(context, callback);
     amazonCheckout.processPayment();
   } catch(e) {

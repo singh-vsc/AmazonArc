@@ -70,6 +70,7 @@
 module.exports = function(context, callback) {
     var payment = context.get.payment();
     var paymentAction = context.get.paymentAction();
+    console.log("AmazonPaymentActionBefore :"+JSON.stringify(payment));
   if (payment.paymentType !== paymentConstants.PAYMENTSETTINGID  && payment.paymentWorkflow !== paymentConstants.PAYMENTSETTINGID)
     callback();
   var order = context.get.order();

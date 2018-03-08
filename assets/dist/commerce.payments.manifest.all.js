@@ -1300,6 +1300,7 @@ module.exports = {
 module.exports = function(context, callback) {
     var payment = context.get.payment();
     var paymentAction = context.get.paymentAction();
+    console.log("AmazonPaymentActionBefore :"+JSON.stringify(payment));
   if (payment.paymentType !== paymentConstants.PAYMENTSETTINGID  && payment.paymentWorkflow !== paymentConstants.PAYMENTSETTINGID)
     callback();
   var order = context.get.order();
@@ -1407,6 +1408,7 @@ var AmazonCheckout = require("../../amazon/checkout");
 
 module.exports = function(context, callback) {
   try {
+    console.log("performPaymentInteraction");
     var amazonCheckout = new AmazonCheckout(context, callback);
     amazonCheckout.processPayment();
   } catch(e) {

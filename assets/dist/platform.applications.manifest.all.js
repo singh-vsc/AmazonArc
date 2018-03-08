@@ -169,7 +169,7 @@ function AppInstall(context, callback) {
 	self.cb = callback;
 
 	self.initialize = function() {
-		console.log(context);
+		console.log("AMAZON-INSTALL"+context);
 		console.log("Getting tenant", self.ctx.apiContext.tenantId);
 		var tenant = context.get.tenant();
 		enableAmazonPaymentWorkflow(tenant);
