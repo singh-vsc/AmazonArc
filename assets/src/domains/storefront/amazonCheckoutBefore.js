@@ -25,6 +25,7 @@
 
 
 module.exports = function(context, callback) {
+	console.log("amazonCheckoutBefore : "+context);
 	var amazonCheckout = new AmazonCheckout(context, callback);
     amazonCheckout.validateAndProcess().then(callback, function(e){
       amazonCheckout.setError(context, callback,e);

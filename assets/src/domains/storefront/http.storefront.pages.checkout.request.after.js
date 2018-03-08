@@ -22,5 +22,6 @@
  */
 
 module.exports = function(context, callback) {
+  console.log("Checkout.request.After : "+context);
   callback();
 };
