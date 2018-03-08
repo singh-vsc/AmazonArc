@@ -1,6 +1,6 @@
 /**
  * This is a scaffold for unit tests for the custom function for
- * `embedded.commerce.payments.action.performPaymentInteraction`.
+ * `embedded.platform.applications.install`.
  * Modify the test conditions below. You may:
  *  - add special assertions for code actions from Simulator.assert
  *  - create a mock context with Simulator.context() and modify it
@@ -12,12 +12,12 @@
 var Simulator = require('mozu-action-simulator');
 var assert = Simulator.assert;
 
-describe('embedded.commerce.payments.action.performPaymentInteraction', function () {
+describe('embedded.platform.applications.install', function () {
 
   var action;
 
   before(function () {
-    action = require('../src/domains/commerce.payments/embedded.commerce.payments.action.performPaymentInteraction');
+    action = require('../src/domains/platform.applications/amazonInstall');
   });
 
   it('runs successfully', function(done) {
@@ -28,13 +28,13 @@ describe('embedded.commerce.payments.action.performPaymentInteraction', function
       done();
     };
 
-    //var context = Simulator.context('embedded.commerce.payments.action.performPaymentInteraction', callback);
-
+    var context = Simulator.context('embedded.platform.applications.install', callback);
+    context.apiContext = {tenantId : "18185"};
     // modify context as necessary
- 
-    callback();
 
-    //Simulator.simulate('embedded.commerce.payments.action.performPaymentInteraction', action, context, callback);*/
-    //Simulator.simulate( context, callback);
+
+    //Simulator.simulate('embedded.platform.applications.install', action, context, callback);*/
+    //Simulator.simulate(context, callback);
+    callback();
   });
 });

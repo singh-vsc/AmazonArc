@@ -1,22 +1,22 @@
 module.exports = {
   
-  'http.storefront.pages.cart.request.before': {
+  'amazonCartBefore': {
       actionName: 'http.storefront.pages.cart.request.before',
-      customFunction: require('./domains/storefront/http.storefront.pages.cart.request.before')
+      customFunction: require('./domains/storefront/amazonCartBefore')
   },
   
-  'http.storefront.pages.cart.request.after': {
+  'amamzonCartAfter': {
       actionName: 'http.storefront.pages.cart.request.after',
-      customFunction: require('./domains/storefront/http.storefront.pages.cart.request.after')
+      customFunction: require('./domains/storefront/amamzonCartAfter')
   },
   
-  'http.storefront.pages.checkout.request.before': {
+  'amazonCheckoutBefore': {
       actionName: 'http.storefront.pages.checkout.request.before',
-      customFunction: require('./domains/storefront/http.storefront.pages.checkout.request.before')
+      customFunction: require('./domains/storefront/amazonCheckoutBefore')
   },
   
-  'http.storefront.pages.checkout.request.after': {
+  'amazonCheckoutAfter': {
       actionName: 'http.storefront.pages.checkout.request.after',
-      customFunction: require('./domains/storefront/http.storefront.pages.checkout.request.after')
+      customFunction: require('./domains/storefront/amazonCheckoutAfter')
   }
 };

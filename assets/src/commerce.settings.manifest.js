@@ -1,7 +1,7 @@
 module.exports = {
   
-  'http.commerce.settings.checkout.paymentsettings.updatePaymentSettings.before': {
+  'amazonSettingValidator': {
       actionName: 'http.commerce.settings.checkout.paymentsettings.updatePaymentSettings.before',
-      customFunction: require('./domains/commerce.settings/http.commerce.settings.checkout.paymentsettings.updatePaymentSettings.before')
+      customFunction: require('./domains/commerce.settings/amazonSettingValidator')
   }
 };

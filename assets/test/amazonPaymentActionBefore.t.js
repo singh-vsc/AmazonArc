@@ -1,6 +1,6 @@
 /**
  * This is a scaffold for unit tests for the custom function for
- * `embedded.commerce.payments.action.performPaymentInteraction`.
+ * `embedded.commerce.payments.action.before`.
  * Modify the test conditions below. You may:
  *  - add special assertions for code actions from Simulator.assert
  *  - create a mock context with Simulator.context() and modify it
@@ -12,12 +12,14 @@
 var Simulator = require('mozu-action-simulator');
 var assert = Simulator.assert;
 
-describe('embedded.commerce.payments.action.performPaymentInteraction', function () {
+var actionName = 'embedded.commerce.payments.action.before';
+
+describe('amazonPaymentActionBefore implementing embedded.commerce.payments.action.before', function () {
 
   var action;
 
   before(function () {
-    action = require('../src/domains/commerce.payments/embedded.commerce.payments.action.performPaymentInteraction');
+    action = require('../src/domains/commerce.payments/amazonPaymentActionBefore');
   });
 
   it('runs successfully', function(done) {
@@ -28,13 +30,13 @@ describe('embedded.commerce.payments.action.performPaymentInteraction', function
       done();
     };
 
-    //var context = Simulator.context('embedded.commerce.payments.action.performPaymentInteraction', callback);
+    //var context = Simulator.context(actionName, callback);
 
     // modify context as necessary
- 
-    callback();
 
-    //Simulator.simulate('embedded.commerce.payments.action.performPaymentInteraction', action, context, callback);*/
-    //Simulator.simulate( context, callback);
+
+    //Simulator.simulate(actionName, action, context, callback);*/
+    //Simulator.simulate(context, callback);
+    callback();
   });
 });
